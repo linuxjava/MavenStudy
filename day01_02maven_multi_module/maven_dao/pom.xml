@@ -11,5 +11,17 @@
 
     <artifactId>maven_dao</artifactId>
 
-
+    <!--上传到本地私服-->
+    <distributionManagement>
+        <repository>
+            <!--与settings.xml的server id保持一致-->
+            <id>releases</id>
+            <!--nexus地址-->
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
